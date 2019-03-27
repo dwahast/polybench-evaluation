@@ -1,5 +1,5 @@
 #!/bin/bash
-#declare -a A7_frequencias=(200000 700000 1400000)
+
 declare -a A7_frequencias=(400000 1000000 1400000)
 declare -a A7_cores=(0 1 2 3)
 
@@ -21,7 +21,7 @@ device="1"
  				make run proc=A7 frequenc="$freq" c0="${A7_cores[0]}" c1="${A7_cores[1]}" c2="${A7_cores[2]}" c3="${A7_cores[3]}" dev="${device}"
  			done
  				cd ..
- 		fi 
+ 		fi
  	done
  done
 
@@ -38,7 +38,7 @@ for freq in "${A15_frequencias[@]}"; do
 				make run proc=A15 frequenc="$freq" f="${file}" c0="${A15_cores[0]}" c1="${A15_cores[1]}" c2="${A15_cores[2]}" c3="${A15_cores[3]}" dev="${device}"
 			done
 				cd ..
-		fi 
+		fi
 	done
 done
 
@@ -52,7 +52,7 @@ for file in $(ls); do
 			make run2 proc=GPU dev="${device}" f="${file}"
 		done
 			cd ..
-	fi 
+	fi
 done
 
 # ## declare an array variable
